@@ -5,22 +5,27 @@
 // the function which contains the assertion.
 
 describe ('triangleTester', function() {
-	it("is equilateral if a === b === c", function() {
-		expect(triangleTester(2,2,2)).to.equal("equilateral");
-	});
 
-  it("is isosceles if a === b !== c or a === c !== b or b === c !== a", function () {
-    expect(triangleTester(1,9,1)).to.equal("isosceles");
-  });
+  //
 
-  it("is scalene if a !== b !== c", function () {
-    expect(triangleTester(4,5,6)).to.equal("isosceles");
-  });
+  // //
 
+  // //
   it ("is not a triangle if (a + b) < c or (a + c) < b or (b + c) < a", function() {
     expect(triangleTester(4,4,9)).to.equal("not a triangle");
   });
 
+  it("is scalene if a !== b !== c", function () {
+    expect(triangleTester(4,5,6)).to.equal("scalene");
+  });
+
+  it("is equilateral if a === b === c", function() {
+    expect(triangleTester(2,2,2)).to.equal("equilateral");
+  });
+
+  it("is isosceles if a === b !== c or a === c !== b or b === c !== a", function () {
+    expect(triangleTester(5,9,5)).to.equal("isosceles");
+  });
   	});
 
 
